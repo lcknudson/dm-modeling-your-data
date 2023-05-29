@@ -1,0 +1,74 @@
+Creat a recipt creating/sharing app
+
+Grocery list app
+
+Planning out tables and how the data will relate to each other. 
+
+Features
+- users can sign into the app with their email and password
+- users can create recipes with ingredients and instructions
+- recipes can be marked as public or private
+- users can view other people’s recipes
+- ingredients from recipes can be added to user’s grocery lists
+- users can create their own occasions and assign recipes to occasions
+
+What do we need to track? 
+email address
+password
+username
+display name
+ingredients
+brand of ingredients
+recipes
+quantity in recipes
+recipe instructions
+public or private recipe 
+From Recipe "add to" shopping list
+Occasion - add recipes to occasions
+Can mulitple users contribute to an occasion? 
+Shopping location "store"
+Add favorite of other user recipe 
+recipe ID to view
+Occasions add recipies 
+
+Table Ideas: 
+
+User Table: 
+user ID: PK
+email address
+password
+username
+dispaly (nickname)
+
+ingredient Table:
+ingredient PK
+ingredient name
+
+
+
+Recipe table:
+recipe ID
+recipe name
+ingredient (foreign key to another table)
+amount of ingredient
+instructions body text
+add ingredient to shopping list
+add recipe to occasion 
+
+Shopping list:
+list_ID
+list active/not active (boolean)
+ingredient_ID (foreign key)
+store_ID(foreign key)
+
+Stores: 
+store_ID (Primary Key)
+store name
+store address
+
+Occasion Table: 
+
+
+
+
+

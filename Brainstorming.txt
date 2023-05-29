@@ -27,46 +27,71 @@ From Recipe "add to" shopping list
 Occasion - add recipes to occasions
 Can mulitple users contribute to an occasion? 
 Shopping location "store"
-Add favorite of other user recipe 
 recipe ID to view
 Occasions add recipies 
 
 Table Ideas: 
 
-User Table: 
+"User" Table: 
 user ID: PK
 email address
 password
 username
 dispaly (nickname)
 
-ingredient Table:
+
+"ingredients" Table:
 ingredient PK
 ingredient name
 
 
 
-Recipe table:
+"Recipe" view:
 recipe ID
 recipe name
-ingredient (foreign key to another table)
-amount of ingredient
+public or private (boolen)
 instructions body text
-add ingredient to shopping list
-add recipe to occasion 
+amount of ingredient
+add ingredients to shopping list
+add recipe to occasion (id number)
 
-Shopping list:
+"recipe_ingredients" table:
+recipe_id: foreign key
+ingredients (foreign key to another table)
+
+
+"Shopping" list:
 list_ID
 list active/not active (boolean)
 ingredient_ID (foreign key)
 store_ID(foreign key)
 
-Stores: 
+"Store": 
 store_ID (Primary Key)
 store name
 store address
 
-Occasion Table: 
+"Occasion" Table: 
+occasion_id
+date
+location
+
+Step 3: Relationships
+
+What field IDs have a Relationships
+
+1-to-1:
+user_id & recipe_ID: 1t1 because a user "owns" a recipe
+
+1-to-Many Relationships:
+- ingredient.id : 1tm because one ingredient could be in mulitple recipes and on multiple shopping lists
+- recipe.id: 1tm because a recipe could be on multiple occasions
+
+Many-to-Many
+ingredient_ID: Is many to many because an ingredient could be on many recipes and many shopping lists (or phrased differently it could be multiple 1 to many's as was mentioned in the lecture)
+
+
+
 
 
 

@@ -45,23 +45,32 @@ ingredient PK
 ingredient name
 
 
+"Occasion" Table: 
+occasion_id
+date
+location
 
 "Recipe" view:
 recipe ID
 recipe name
 public or private (boolen)
-instructions body text
-amount of ingredient
 add ingredients to shopping list
 add recipe to occasion (id number)
 
 "recipe_ingredients" table:
 recipe_id: foreign key
 ingredients (foreign key to another table)
+ingredients name
 
+"recipe" instructions: 
+recipe_id: foreign key
+instructions body text
+amount of ingredient (number)
+amount of ingredient (description)
 
 "Shopping" list:
 list_ID
+list nameadd
 list active/not active (boolean)
 ingredient_ID (foreign key)
 store_ID(foreign key)
@@ -71,10 +80,6 @@ store_ID (Primary Key)
 store name
 store address
 
-"Occasion" Table: 
-occasion_id
-date
-location
 
 Step 3: Relationships
 
